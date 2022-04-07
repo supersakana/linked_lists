@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
-# contains a value and direction
-class Node
-  attr_accessor :next, :data
+# require_relative 'linked_list'
 
-  def initialize(data)
-    @next = nil
+# contains a value and pointer
+class Node
+  attr_accessor :data, :pointer
+
+  def initialize(data, pointer)
+    @pointer = pointer
     @data = data
   end
 end

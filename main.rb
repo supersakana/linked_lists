@@ -4,4 +4,5 @@ require_relative 'linked_list'
 require_relative 'node'
 
 list = LinkedList.new
-list.print_list
+list.append('Zac')
+list.append('Zoe')
