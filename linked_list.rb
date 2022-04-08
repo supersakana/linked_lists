@@ -15,13 +15,15 @@ class LinkedList
 
   def append(value)
     if @head.nil?
-      @head = Node.new(value, nil)
-      @next_node = head
+      @head = Node.new(value, @next_node)
+      @next_node = @head
     else
       @tail = Node.new(value, nil)
-      @next_node = tail
+      @next_node.pointer = tail
+      @next_node = nil
     end
     @size += 1
+    p "Size: #{@size} Head: #{@head} Tail: #{@tail} Next: #{@next_node}}"
   end
 
   def prepend(value)
@@ -29,3 +31,5 @@ class LinkedList
     @size += 1
   end
 end
+
+# how do we append a value and make the current value the pointer of the previous one?
