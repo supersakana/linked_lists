@@ -16,5 +16,10 @@ LINKED LISTS (Dynamic Data Structures) - Dont need 7 bytes of memory all in one 
 
 [ NODE(head) ] -> [ NODE ] -> [ NODE(tail) ] -> nil
 
-Ruby does NOT have a linked list class but can be created with similar functonality using arrays
+
 https://www.sitepoint.com/rubys-missing-data-structure/
+
+One way to create a linked list would be tu sue the Struct object to represent a cons cell
+
+Cell = Struct.new(:value, :next)
+list = Cell.new("head", nil)

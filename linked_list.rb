@@ -4,7 +4,7 @@ require_relative 'node'
 
 # Represents the full list of data
 class LinkedList
-  attr_accessor :name
+  attr_accessor :head, :tail, :size
 
   def initialize
     @head = nil
@@ -14,9 +14,18 @@ class LinkedList
   end
 
   def append(value)
-    @current_node = Node.new(value, @next_node)
+    if @head.nil?
+      @head = Node.new(value, nil)
+      @next_node = head
+    else
+      @tail = Node.new(value, nil)
+      @next_node = tail
+    end
     @size += 1
-    @next_node = @current_node
-    p "Size:#{@size} Created: #{@current_node.data} Next: #{@next_node.pointer}"
+  end
+
+  def prepend(value)
+    @head = Node.new(value, @next_node)
+    @size += 1
   end
 end
