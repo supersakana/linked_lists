@@ -9,3 +9,8 @@ list.append('Y')
 list.append('X')
 list.prepend('W')
 list.prepend('V')
+
+p list.at(0)
+p list.at(1)
+p list.at(2)
+p list.at(3)

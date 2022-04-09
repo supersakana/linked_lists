@@ -40,6 +40,24 @@ class LinkedList
     @size += 1
     print_data
   end
+
+  def at(index)
+    return @head.data if index.zero?
+
+    current_node = @head.pointer
+    i = 0
+    while i < index
+      current_node = current_node.pointer
+      i += 1
+    end
+    current_node.data
+  end
 end
 
+# QUESTIONS
+
 # how can we print the values of our linked list in order?
+
+# how can re fetch a specific node according to it's index?
+#   - start at @head
+#   - iterate throgh pointer until index number is hit
