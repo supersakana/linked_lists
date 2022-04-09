@@ -13,6 +13,14 @@ class LinkedList
     @size = 0
   end
 
+  def print_data
+    p "Size: #{@size}"
+    p "Head: #{@head.data unless @head.nil?}"
+    p "Tail: #{@tail.data unless @tail.nil?}"
+    p "Next: #{@next_node.data unless @next_node.nil?}"
+    p '--------------------'
+  end
+
   def append(value)
     if @head.nil?
       @head = Node.new(value, @next_node)
@@ -20,16 +28,18 @@ class LinkedList
     else
       @tail = Node.new(value, nil)
       @next_node.pointer = tail
-      @next_node = nil
+      @next_node = tail
     end
     @size += 1
-    p "Size: #{@size} Head: #{@head} Tail: #{@tail} Next: #{@next_node}}"
+    print_data
   end
 
   def prepend(value)
-    @head = Node.new(value, @next_node)
+    new_head = Node.new(value, @head)
+    @head = new_head
     @size += 1
+    print_data
   end
 end
 
-# how do we append a value and make the current value the pointer of the previous one?
+# how can we print the values of our linked list in order?
