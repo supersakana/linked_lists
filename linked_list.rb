@@ -45,7 +45,7 @@ class LinkedList
     return @head.data if index.zero?
 
     current_node = @head.pointer
-    i = 0
+    i = 1
     while i < index
       current_node = current_node.pointer
       i += 1
@@ -56,8 +56,10 @@ end
 
 # QUESTIONS
 
-# how can we print the values of our linked list in order?
+# how can re fetch a specific node according to it's index? (WIP)
 
-# how can re fetch a specific node according to it's index?
-#   - start at @head
-#   - iterate throgh pointer until index number is hit
+# BUGS
+
+# Check the conditional statement at(index) to see how to return @head at the propper index
+
+# Iterator skips head when inputted at 0 (look into append, prepend, at(index), and print methods to fix bug))
