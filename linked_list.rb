@@ -13,14 +13,7 @@ class LinkedList
     @size = 0
   end
 
-  def print_data
-    p "Size: #{@size}"
-    p "Head: #{@head.data unless @head.nil?}"
-    p "Tail: #{@tail.data unless @tail.nil?}"
-    p "Next: #{@next_node.data unless @next_node.nil?}"
-    p '--------------------'
-  end
-
+  # adds a node to the end of the list
   def append(value)
     if @head.nil?
       @head = Node.new(value, @next_node)
@@ -31,16 +24,18 @@ class LinkedList
       @next_node = tail
     end
     @size += 1
-    print_data
+    # print_data
   end
 
+  # adds a node to the start of the list
   def prepend(value)
     new_head = Node.new(value, @head)
     @head = new_head
     @size += 1
-    print_data
+    # print_data
   end
 
+  # returns data according to given index
   def at(index)
     return @head.data if index.zero?
 
@@ -52,14 +47,16 @@ class LinkedList
     end
     current_node.data
   end
+
+  # removes last node at the tail of the list
+  def pop
+    current_node = @head.pointer
+    until current_node.nil?
+      if current_node.pointer == @tail
+        @tail = current_node
+        @tail.pointer = nil
+      end
+      current_node = current_node.pointer
+    end
+  end
 end
-
-# QUESTIONS
-
-# how can re fetch a specific node according to it's index? (WIP)
-
-# BUGS
-
-# Check the conditional statement at(index) to see how to return @head at the propper index
-
-# Iterator skips head when inputted at 0 (look into append, prepend, at(index), and print methods to fix bug))
