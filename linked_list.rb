@@ -59,4 +59,28 @@ class LinkedList
       current_node = current_node.pointer
     end
   end
+
+  # returns true if contained value is within the linked list
+  def contains?(value)
+    current_node = @head
+    included = false
+    until current_node.nil?
+      if current_node.data == value
+        included = true
+        break
+      end
+      current_node = current_node.pointer
+    end
+    included
+  end
+
+  # basic printer method
+  def printer
+    current_node = @head
+    until current_node.nil?
+      p current_node.data.to_s
+      current_node = current_node.pointer
+    end
+    p 'Done'
+  end
 end

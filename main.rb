@@ -10,9 +10,9 @@ list.append('X')
 list.prepend('W')
 list.prepend('V')
 
-list.pop
-list.pop
-list.pop
+list.contains?('A')
+
+# list.pop
 
 # p list.at(0)
 # p list.at(1)
