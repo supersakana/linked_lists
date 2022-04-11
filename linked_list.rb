@@ -74,13 +74,23 @@ class LinkedList
     included
   end
 
-  # basic printer method
+  def find(value)
+    current_node = @head
+    i = 0
+    until current_node.nil?
+      p i if current_node.data == value
+
+      current_node = current_node.pointer
+      i += 1
+    end
+  end
+
+  # Basic printer method
   def printer
     current_node = @head
     until current_node.nil?
       p current_node.data.to_s
       current_node = current_node.pointer
     end
-    p 'Done'
   end
 end
