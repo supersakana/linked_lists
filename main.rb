@@ -11,14 +11,16 @@ list.prepend('W')
 list.prepend('V')
 
 # list.contains?('A')
-list.printer
-list.find('V')
-list.find('W')
-list.find('X')
-list.find('Y')
-list.find('Z')
+# list.printer
+# list.find('V')
+# list.find('W')
+# list.find('X')
+# list.find('Y')
+# list.find('Z')
+# list.find('B')
 
 # list.pop
+p list.to_s
 
 # p list.at(0)
 # p list.at(1)

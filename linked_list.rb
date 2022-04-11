@@ -74,6 +74,7 @@ class LinkedList
     included
   end
 
+  # returns the index of a given value
   def find(value)
     current_node = @head
     i = 0
@@ -85,12 +86,14 @@ class LinkedList
     end
   end
 
-  # Basic printer method
-  def printer
+  # returns string of linked list
+  def to_s
     current_node = @head
+    string = ''
     until current_node.nil?
-      p current_node.data.to_s
+      string += "(#{current_node.data}) -> "
       current_node = current_node.pointer
     end
+    "#{string} nil"
   end
 end
