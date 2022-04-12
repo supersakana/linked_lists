@@ -96,4 +96,22 @@ class LinkedList
     end
     "#{string} nil"
   end
+
+  # inserts the value at a given index of the linked list
+  def insert_at(value, index)
+    current_node = @head
+    i = 0
+    until i == index
+      if i == index - 1
+        inserted_node = Node.new(value, current_node.pointer)
+        current_node.pointer = inserted_node
+      end
+      current_node = current_node.pointer
+      i += 1
+    end
+  end
+
+  def remove_at(index)
+    # removes an item from linked list at a given array
+  end
 end

@@ -21,6 +21,10 @@ list.prepend('V')
 
 # list.pop
 p list.to_s
+list.insert_at('J', 3)
+p list.to_s
+list.insert_at('I', 1)
+p list.to_s
 
 # p list.at(0)
 # p list.at(1)
