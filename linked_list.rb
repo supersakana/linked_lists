@@ -111,7 +111,17 @@ class LinkedList
     end
   end
 
+  # removes node at a given index
   def remove_at(index)
-    # removes an item from linked list at a given array
+    current_node = @head
+    i = 0
+    until i == index
+      if i == index - 1
+        removed_node = current_node.pointer
+        current_node.pointer = removed_node.pointer
+      end
+      current_node = current_node.pointer
+      i += 1
+    end
   end
 end

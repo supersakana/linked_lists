@@ -1,3 +1,5 @@
+NOTE! This project is to demonstrate how I build a linked list from scratch.
+
 In CPU Science, one of the most basic and fundemental data structures is a linked list
 
 The benefit of this data structure is that a list of elements can be easily inserted or removed without reallocation of any other elements.
@@ -15,7 +17,6 @@ ARRAYS (Stactic Data Structures) - When an array is created, it needs a certain 
 LINKED LISTS (Dynamic Data Structures) - Dont need 7 bytes of memory all in one place they 7 bytes can be scattered therfore not taking up a single block.
 
 [ NODE(head) ] -> [ NODE ] -> [ NODE(tail) ] -> nil
-
 
 https://www.sitepoint.com/rubys-missing-data-structure/
 
